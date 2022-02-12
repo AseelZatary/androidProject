@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerLoginActivity"
+    android:id="@+id/login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/txtViewHeading"
+                android:textColor="#021737"
+                android:textSize="34sp"
+                android:layout_below="@id/imageView"
+                android:text="@string/join_our_hotel_today" />
+
+            <EditText
+                android:id="@+id/usernameEdt"
+                style="@style/EditTexts"
+                android:layout_below="@id/textViewTitle"
+                android:layout_marginTop="30dp"
+                android:drawableEnd="@drawable/ic_user"
+                android:hint="@string/usernameEdt"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/passEdt"
+                style="@style/EditTexts"
+                android:layout_below="@id/usernameEdt"
+                android:layout_marginTop="30dp"
+
+                android:drawableEnd="@drawable/ic_pass"
+                android:hint="@string/passEdt"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/Button.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passEdt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:onClick="login"
+                android:text="@string/loginButton" />
+
+            <TextView
+                android:id="@+id/txtView"
+                style="@style/LoginRegisterTxtView"
+                android:layout_below="@+id/loginButton"
+                android:layout_centerHorizontal="true"
+                android:minHeight="48dp"
+                android:onClick="register"
+                android:text="@string/txtView" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
